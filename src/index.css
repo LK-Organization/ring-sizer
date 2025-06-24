@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom slider styling */
+.slider-thumb {
+  @apply bg-gray-200 rounded-lg appearance-none cursor-pointer;
+}
+
+.slider-thumb::-webkit-slider-thumb {
+  @apply appearance-none w-5 h-5 bg-[#D4AF37] rounded-full cursor-pointer shadow-md;
+}
+
+.slider-thumb::-moz-range-thumb {
+  @apply w-5 h-5 bg-[#D4AF37] rounded-full cursor-pointer shadow-md border-0;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+[dir="rtl"] .list-decimal {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
